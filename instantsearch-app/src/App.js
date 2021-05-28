@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom";
+import algoliasearch from "algoliasearch/lite";
+import logo from "./logo.svg";
+import "./App.css";
+
+const searchClient = algoliasearch(
+  "ROCHIEJW4S",
+  "a1d75e2e71aa32957c2360ee48bda44e"
+);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="ais-InstantSearch">
+      <InstantSearch searchClient={searchClient} indexName="nba-players">
+        <div className="right-panel">
+          <SearchBox />
+          <Hits />
+        </div>
+      </InstantSearch>
     </div>
   );
 }
