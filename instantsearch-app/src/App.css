@@ -40,3 +40,27 @@
 .ais-searchBox {
   margin: 1em 0;
 }
+
+.ais-Pagination {
+  margin-top: 1em;
+}
+
+.left-panel {
+  float: left;
+  width: 250px;
+}
+
+.right-panel {
+  margin-left: 260px;
+}
+
+.ais-Hits-item {
+  margin-bottom: 1em;
+  width: calc(50% - 1rem);
+  display: inline-block
+}
+
+.hit-name {
+  margin-bottom: .5em;
+}
+

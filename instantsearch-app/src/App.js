@@ -5,6 +5,7 @@ import {
   Configure,
   ClearRefinements,
   RefinementList,
+  Pagination
 } from "react-instantsearch-dom";
 import Hit from './components/Hit'
 import algoliasearch from "algoliasearch/lite";
@@ -28,6 +29,7 @@ function App() {
         <div className="right-panel">
           <SearchBox />
           <Hits hitComponent={Hit} />
+          <Pagination />
         </div>
       </InstantSearch>
     </div>
