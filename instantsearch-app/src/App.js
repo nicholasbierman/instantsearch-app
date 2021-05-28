@@ -1,4 +1,10 @@
-import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom";
+import {
+  InstantSearch,
+  SearchBox,
+  Hits,
+  Highlight,
+} from "react-instantsearch-dom";
+import Hit from './components/Hit'
 import algoliasearch from "algoliasearch/lite";
 import logo from "./logo.svg";
 import "./App.css";
@@ -14,11 +20,12 @@ function App() {
       <InstantSearch searchClient={searchClient} indexName="nba-players">
         <div className="right-panel">
           <SearchBox />
-          <Hits />
+          <Hits hitComponent={Hit} />
         </div>
       </InstantSearch>
     </div>
   );
 }
+
 
 export default App;
