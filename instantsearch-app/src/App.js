@@ -2,11 +2,12 @@ import {
   InstantSearch,
   SearchBox,
   Hits,
-  Highlight,
+  Configure,
+  ClearRefinements,
+  RefinementList,
 } from "react-instantsearch-dom";
 import Hit from './components/Hit'
 import algoliasearch from "algoliasearch/lite";
-import logo from "./logo.svg";
 import "./App.css";
 
 const searchClient = algoliasearch(
@@ -18,6 +19,12 @@ function App() {
   return (
     <div className="ais-InstantSearch">
       <InstantSearch searchClient={searchClient} indexName="nba-players">
+        <div className="left-panel">
+          <ClearRefinements />
+          <h2>Teams</h2>
+          <RefinementList attribute="team" />
+          <Configure hitsPerPage={8} />
+        </div>
         <div className="right-panel">
           <SearchBox />
           <Hits hitComponent={Hit} />
