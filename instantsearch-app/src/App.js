@@ -10,6 +10,7 @@ import {
 import Hit from './components/Hit'
 import algoliasearch from "algoliasearch/lite";
 import "./App.css";
+import { useSelector } from 'react-redux';
 
 const searchClient = algoliasearch(
   "ROCHIEJW4S",
@@ -17,15 +18,19 @@ const searchClient = algoliasearch(
 );
 
 function App() {
+  const indexName = useSelector(state => state.indexState.indexName);
+
   return (
     <div className="ais-InstantSearch">
-      <InstantSearch searchClient={searchClient} indexName="nba-players">
+      <InstantSearch searchClient={searchClient} indexName={indexName}>
         <div className="left-panel">
           <HitsPerPage
             items={[
               { value: 5, label: "Show 5 hits" },
               { value: 10, label: "Show 10 hits" },
-            ]}/>
+            ]}
+            defaultRefinement={5}
+          />
           <h2>Teams</h2>
           <ClearRefinements />
           <RefinementList attribute="team" />

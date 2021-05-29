@@ -6,10 +6,10 @@ export const setIndexName = (indexName) => ({
 });
 
 export const changeSearchIndex = (indexName) => async dispatch => {
-    setIndexName(indexName);
+    dispatch(setIndexName(indexName));
 };
 
-const initialState = { indexName: "nba-teams" }
+const initialState = { indexName: "nba-players" };
 
 function reducer (state = initialState, action) {
     let newState;

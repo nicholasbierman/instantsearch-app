@@ -1,9 +1,9 @@
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
-import indexNameReducer from './indexName';
+import indexState from './indexName';
 
 const rootReducer = combineReducers({
-    indexNameReducer
+    indexState
 });
 
 let enhancer;
