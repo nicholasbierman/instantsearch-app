@@ -2,9 +2,9 @@ import {
   InstantSearch,
   SearchBox,
   Hits,
-  Configure,
   ClearRefinements,
   RefinementList,
+  HitsPerPage,
   Pagination
 } from "react-instantsearch-dom";
 import Hit from './components/Hit'
@@ -21,10 +21,14 @@ function App() {
     <div className="ais-InstantSearch">
       <InstantSearch searchClient={searchClient} indexName="nba-players">
         <div className="left-panel">
-          <ClearRefinements />
+          <HitsPerPage
+            items={[
+              { value: 5, label: "Show 5 hits" },
+              { value: 10, label: "Show 10 hits" },
+            ]}/>
           <h2>Teams</h2>
+          <ClearRefinements />
           <RefinementList attribute="team" />
-          <Configure hitsPerPage={8} />
         </div>
         <div className="right-panel">
           <SearchBox />
