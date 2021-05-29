@@ -7,7 +7,8 @@ import {
   HitsPerPage,
   Pagination
 } from "react-instantsearch-dom";
-import Hit from './components/Hit'
+import Hit from './components/Hit';
+import IndexSelector from './components/IndexSelector';
 import algoliasearch from "algoliasearch/lite";
 import "./App.css";
 import { useSelector } from 'react-redux';
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <div className="ais-InstantSearch">
+      <IndexSelector />
       <InstantSearch searchClient={searchClient} indexName={indexName}>
         <div className="left-panel">
           <HitsPerPage

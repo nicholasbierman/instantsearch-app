@@ -1,0 +1,8 @@
+button.active {
+    background-color: orange;
+}
+
+button {
+    margin-bottom: 1em;
+    max-width: 50%;
+}
