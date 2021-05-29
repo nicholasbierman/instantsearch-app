@@ -31,3 +31,19 @@ playersIndex
 // }).then(({ hits }) => {
 //     console.log(hits);
 // });
+
+/* {
+  name: "Lebron James",
+  teams: {
+    "Lakers": 204,
+    "Heat": 405,
+    "Cavaliers": 40234
+  }
+}
+
+*/
+// allow for duplicate names, or not?
+// send queries back to algolia?
+// redux?
+// user can control hits per page 
+//

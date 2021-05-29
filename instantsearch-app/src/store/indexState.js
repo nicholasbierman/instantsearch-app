@@ -1,6 +1,6 @@
 const SET_INDEX_NAME = 'indexName/setIndexName';
 
-export const setIndexName = (indexName) => ({
+const setIndexName = (indexName) => ({
     type: SET_INDEX_NAME,
     payload: indexName
 });

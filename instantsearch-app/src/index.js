@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store'
 import { Provider } from 'react-redux';
-import { changeSearchIndex } from './store/indexName';
+import { changeSearchIndex } from './store/indexState';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';

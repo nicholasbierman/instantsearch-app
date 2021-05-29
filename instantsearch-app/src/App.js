@@ -33,7 +33,7 @@ function App() {
           />
           <h2>Teams</h2>
           <ClearRefinements />
-          <RefinementList attribute="team" />
+          <RefinementList attribute="location" />
         </div>
         <div className="right-panel">
           <SearchBox />
