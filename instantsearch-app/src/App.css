@@ -37,6 +37,9 @@
   }
 }
 
+.ais-InstantSearch { max-width: 960px; overflow: hidden; margin: 0 auto }
+
+
 .ais-searchBox {
   margin: 1em 0;
 }
@@ -64,4 +67,11 @@
 .hit-name {
   margin-bottom: .5em;
 }
+
+.ais-Hits-item img {
+  margin-right: 1em;
+  width: 10%;
+  height: 10%;
+}
+
 
