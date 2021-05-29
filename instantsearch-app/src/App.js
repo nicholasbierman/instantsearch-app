@@ -33,7 +33,7 @@ function App() {
           />
           <h2>Teams</h2>
           <ClearRefinements />
-          <RefinementList attribute="location" />
+          <RefinementList attribute={indexName === "nba-teams" ? "location" : "team"} />
         </div>
         <div className="right-panel">
           <SearchBox />
