@@ -4,7 +4,7 @@ import '../../App.css';
 
 export const Hit = ({ hit }) => {
   const indexName = useSelector(state => state.indexState.indexName);
-  const logoUrlBase = "https://instantsearch-logos.s3.amazonaws.com"
+  const logoUrlBase = "https://instantsearch-logos.s3.amazonaws.com";
   return (
     <div>
       {indexName === "nba-teams" ? (
