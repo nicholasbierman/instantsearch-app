@@ -1,17 +1,17 @@
 import { Highlight } from 'react-instantsearch-dom';
 import { useSelector } from 'react-redux';
-import logo from '../../logos/atlanta_hawks.png';
 import '../../App.css';
 
 export const Hit = ({ hit }) => {
   const indexName = useSelector(state => state.indexState.indexName);
-
+  const logoUrlBase = "https://instantsearch-logos.s3.amazonaws.com"
   return (
     <div>
       {indexName === "nba-teams" ? (
         <img
           alt={hit.name}
-          src={logo} />
+          src={`${logoUrlBase}/${hit.logoUrl}`}
+        />
       ) : null}
       <div className="hit-name">
         <Highlight attribute="name" hit={hit} />
