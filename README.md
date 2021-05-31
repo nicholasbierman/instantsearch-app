@@ -1,4 +1,5 @@
 # React Instantsearch App for NBA Teams & Players
+## [Live link]()
 
 ## Index Selection
 <p>The goal of this application is to create a search experience where users can search for NBA teams and players separately. I used two different indices from the provided `basketball` data set, one for `nba-teams` and `nba-players`.</p> 
