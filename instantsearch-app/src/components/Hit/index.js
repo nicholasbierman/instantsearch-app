@@ -21,6 +21,11 @@ export const Hit = ({ hit }) => {
       </div>
       {hit.points && <div className="hit-points">{hit.points} Points</div>}
       {hit.score && (
+        /*
+        Perform the Math.ceil() operation on the frontend instead of at indexing
+        time to ensure that the score is still used in Algolia's tie-breaking
+        formula while not displaying unnecessarily precise digits to the user
+        */
         <div className="hit-score">Score: {Math.ceil(hit.score)}</div>
       )}
     </div>
