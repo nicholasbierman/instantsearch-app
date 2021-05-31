@@ -27,13 +27,6 @@ function App() {
       <IndexSelector />
       <InstantSearch searchClient={searchClient} indexName={indexName}>
         <div className="left-panel">
-          <HitsPerPage
-            items={[
-              { value: 5, label: "Show 5 hits" },
-              { value: 10, label: "Show 10 hits" },
-            ]}
-            defaultRefinement={5}
-          />
           <RangeInput
             attribute={indexName === "nba-teams" ? "score" : "points"}
             translations={{ submit: "Go" }}
