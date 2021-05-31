@@ -27,11 +27,32 @@ function App() {
       <IndexSelector />
       <InstantSearch searchClient={searchClient} indexName={indexName}>
         <div className="left-panel">
+          <HitsPerPage
+            defaultRefinement={5}
+            items={[
+              {
+                value: 5,
+                label: "5 hits per page",
+              },
+              {
+                value: 10,
+                label: "10 hits per page",
+              },
+              {
+                value: 15,
+                label: "15 hits per page",
+              },
+              {
+                value: 20,
+                label: "20 hits per page",
+              },
+            ]}
+          />
           <RangeInput
             attribute={indexName === "nba-teams" ? "score" : "points"}
             translations={{ submit: "Go" }}
           />
-          <h2>Teams</h2>
+          <h2>Filter by {indexName === "nba-players" ? "Team" : "Location"}</h2>
           <ClearRefinements />
           <RefinementList
             attribute={indexName === "nba-teams" ? "location" : "team"}

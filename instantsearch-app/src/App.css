@@ -51,11 +51,11 @@
 
 .left-panel {
   float: left;
-  width: 250px;
+  width: 25%;
 }
 
 .right-panel {
-  margin-left: 260px;
+  margin-left: 250px;
 }
 
 .ais-Hits-item {
