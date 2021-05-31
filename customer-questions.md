@@ -21,7 +21,7 @@ Hi Matt,
 
 Thanks for reaching out. I appreciate your feedback on the new dashboard design and will be sure to forward that to our product team.
 
-To clear or delete an index, you can alo use the Algolia API with the [`index.delete()`](https://www.algolia.com/doc/api-reference/api-methods/delete-index/) and [`index.clearObjects()`](https://www.algolia.com/doc/api-reference/api-methods/clear-objects/) methods, respectively. These methods will have the same effect as performing them from the dashboard and will save you those extra clicks as your team is iterating.
+To clear or delete an index, you can alo use the Algolia API with the [`index.delete()`](https://www.algolia.com/doc/api-reference/api-methods/delete-index/) and [`index.clearObjects()`](https://www.algolia.com/doc/api-reference/api-methods/clear-objects/) methods, respectively. These methods will have the same effect as those within the dashboard and will save you those extra clicks as your team is iterating.
 
 Here's a link to our [installation documentation](https://www.algolia.com/doc/api-client/getting-started/install/javascript/?client=javascript) for the API client.
 
