@@ -1,7 +1,12 @@
 # React Instantsearch App for NBA Teams & Players
 
 ## Index Selection
-<p>The goal of this application is to create a search experience where users can search for NBA teams and players separately. I used two different indices from the provided `basketball` data set, one for `nba-teams` and `nba-players`. Keeping separate indices, as opposed to having records for both teams and players in the same index, allowed me to tailor each index's configuration to its specific content while maintaining a flattened data structure. </p>
+<p>The goal of this application is to create a search experience where users can search for NBA teams and players separately. I used two different indices from the provided `basketball` data set, one for `nba-teams` and `nba-players`.</p> 
+
+<p>Keeping separate indices, as opposed to having records for both teams and players in the same index, allowed me to tailor each index's configuration to its specific content while maintaining a flattened data structure.</p>
+
+<p>From an implementation perspective, I indexed the data using the Algolia JavaScript API (scripts to configure each index can be found in the <code>algolia</code> directory) and built the search UI with the React InstantSearch library, Redux for global state management, and AWS S3 for image hosting. I chose this approach to illustrate my proficiency with these tools.</p>
+
 
 ## Searchable Attributes
 - nba-teams: `["name"]`
@@ -11,8 +16,9 @@ On the `nba-players` index, I used `["unordered(name)"]` to equally weight a pla
 
 ## Filtering data
 - nba-teams: `["location", "score"]`
--nba-players: `["team", "points"]`
-<p>While I did not want to include these properties in `searchableAttributes`, I improved the search experience and let users fine-tune their query by including them in `attributesForFaceting` at indexing time. I chose not to use the `filterOnly` method because I needed to include counts of each facet value on the frontend with the `RefinementList` widget.</p>
+- nba-players: `["team", "points"]`
+
+<p>While I did not want to include these properties in <code>searchableAttributes</code>, I improved the search experience and let users fine-tune their query by including them in <code>attributesForFaceting</code> at indexing time. I chose not to use the <code>filterOnly</code> method because I needed to include counts of each facet value on the frontend with the `RefinementList` widget.</p>
 
 ## Custom Ranking
 - nba-teams: `["desc(score)"]`
