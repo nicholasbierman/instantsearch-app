@@ -5,13 +5,14 @@ import {
   ClearRefinements,
   RefinementList,
   HitsPerPage,
-  Pagination
+  Pagination,
+  RangeInput,
 } from "react-instantsearch-dom";
-import Hit from './components/Hit';
-import IndexSelector from './components/IndexSelector';
+import Hit from "./components/Hit";
+import IndexSelector from "./components/IndexSelector";
 import algoliasearch from "algoliasearch/lite";
 import "./App.css";
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 
 const searchClient = algoliasearch(
   "ROCHIEJW4S",
@@ -19,7 +20,7 @@ const searchClient = algoliasearch(
 );
 
 function App() {
-  const indexName = useSelector(state => state.indexState.indexName);
+  const indexName = useSelector((state) => state.indexState.indexName);
 
   return (
     <div className="ais-InstantSearch">
@@ -33,9 +34,15 @@ function App() {
             ]}
             defaultRefinement={5}
           />
+          <RangeInput
+            attribute={indexName === "nba-teams" ? "score" : "points"}
+            translations={{ submit: "Go" }}
+          />
           <h2>Teams</h2>
           <ClearRefinements />
-          <RefinementList attribute={indexName === "nba-teams" ? "location" : "team"} />
+          <RefinementList
+            attribute={indexName === "nba-teams" ? "location" : "team"}
+          />
         </div>
         <div className="right-panel">
           <SearchBox />
@@ -46,6 +53,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;
